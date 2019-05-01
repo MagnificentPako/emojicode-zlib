@@ -37,11 +37,6 @@ extern "C" s::Data* decompress(s::Data* data) {
     output->count = chars.size();
     output->data = bytes;
 
-    std::ofstream myfile;
-    myfile.open("cpp.nbt");
-    for(const auto &e : chars) myfile << e;
-    myfile.close();
-
     delete [] buff;
 
     return output; 
